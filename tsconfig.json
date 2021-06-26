@@ -15,5 +15,9 @@
     "jsx": "preserve"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "sassOptions": {
+    "includePaths": ["./styles"],
+    "prependData": "@import './styles/utils/_mixins.scss'"
+  },
   "exclude": ["node_modules"]
 }

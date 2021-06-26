@@ -1,0 +1,38 @@
+$primary: #344b58;
+$secondary: #92cd89;
+$third: #263844;
+$greyblue: #70aab6;
+$green: #92cd89;
+$greenblue: #418289;
+$orange: #e29148;
+$alert: #e88c8c;
+$beige: #efe3d5;
+$light: #fff;
+$dark: #444444;
+$medium: #dde6eb;
+
+$base-gap: 16px;
+$row-max-width: 1520px;
+
+$h1-fs: 45px;
+$h2-fs: 38px;
+$h3-fs: 26px;
+$h4-fs: 24px;
+$h5-fs: 22px;
+$h6-fs: 20px;
+
+// Breakpoint Settings
+
+// min or max
+$media-direction: min; // min / max — default is min (mobile first)
+
+// Breakpoints
+$breakpoints: (
+  "default": 0px,
+  "xs": 320px,
+  "s": 680px,
+  "m": 1025px,
+  "l": 1200px,
+  "xl": 1400px,
+  "xxl": 1600px,
+);
