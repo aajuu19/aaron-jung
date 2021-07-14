@@ -1,0 +1,7 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: $row-max-width;
+  padding: 0 2.5rem;
+}

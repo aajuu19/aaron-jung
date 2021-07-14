@@ -1,0 +1,35 @@
+.root {
+  background-image: url("./../../../public/teaserBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+  color: $light;
+  padding: rem(125px) 0;
+  margin: 6rem 0;
+
+  @include black-overlay;
+
+  .innerWrapper {
+    @include to-front;
+  }
+
+  .heading {
+    display: block;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    font-size: rem(36px);
+    line-height: rem(36px);
+    font-weight: 700;
+    @include up("l") {
+      font-size: rem(36px);
+      line-height: rem(36px + 10px);
+    }
+  }
+
+  .description {
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+}

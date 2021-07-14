@@ -1,24 +1,28 @@
+import * as React from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import Header from "./../components/common/header/Header";
+import { Container, Header, Hero, H1, H2, LanguageContext, Typography } from "./../components/common";
+import t from "./../translations/index";
 
 export default function Home() {
+  const lang = React.useContext<string>(LanguageContext) as "de" | "en";
+
   return (
     <>
-      <Header imageName="home" />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sint, fugiat quibusdam asperiores error amet harum, optio illo nemo libero excepturi explicabo ea tempore corrupti hic
-        numquam, tenetur natus obcaecati?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sint, fugiat quibusdam asperiores error amet harum, optio illo nemo libero excepturi explicabo ea tempore corrupti hic
-        numquam, tenetur natus obcaecati?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sint, fugiat quibusdam asperiores error amet harum, optio illo nemo libero excepturi explicabo ea tempore corrupti hic
-        numquam, tenetur natus obcaecati?
-      </p>
+      <Container>
+        <H1 mainText="Aaron Jung" secondaryText="passionierter Frontend-Developer aus Berlin" />
+        <Typography mBr>{t.introTextFirst[lang]}</Typography>
+        <Typography mBr>{t.introTextSecond[lang]}</Typography>
+      </Container>
+
+      <Hero heading="Meine Referenzen" description="Verschaffen Sie sich einen Überblick über alle meine bisherigen Projekte." buttonText="zu meinen Referenzen" buttonLink="/referenzen" />
+
+      <Container>
+        <H2 mainText="Worin liegt meine Hauptmotivation" />
+        <Typography mBr>{t.motivationTextFirst[lang]}</Typography>
+        <Typography mBr>{t.motivationTextSecond[lang]}</Typography>
+      </Container>
     </>
   );
 }

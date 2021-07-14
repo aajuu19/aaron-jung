@@ -3,9 +3,10 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  line-height: rem(26px);
+  color: $dark;
 }
 
 a {
@@ -14,9 +15,52 @@ a {
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 #__next {
   display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  text-transform: uppercase;
+  margin-bottom: rem(30px);
+  color: $primary;
+  font-weight: 700;
+  display: block;
+  flex-basis: 100%;
+  width: 100%;
+
+  &.dark {
+    color: $dark;
+  }
+
+  &.light {
+    color: $light;
+  }
+
+  @include up("m") {
+    letter-spacing: 3px;
+  }
+
+  span {
+    display: block;
+    letter-spacing: normal;
+    text-transform: none;
+    font-weight: 400;
+    color: $secondary;
+  }
 }

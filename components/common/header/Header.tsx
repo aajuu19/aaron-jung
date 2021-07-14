@@ -6,7 +6,7 @@ type HeaderProps = {
   imageName: string;
 };
 
-export default function Header(props: HeaderProps) {
+export function Header(props: HeaderProps) {
   const { imageName } = props;
 
   return (

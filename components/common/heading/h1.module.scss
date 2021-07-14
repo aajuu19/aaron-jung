@@ -1,0 +1,17 @@
+.root {
+  font-size: rem($h1-fs * 0.6);
+  line-height: rem($h1-fs * 0.6 + 10);
+
+  span {
+    font-size: rem($h1-fs * 0.5);
+  }
+
+  @include up("m") {
+    font-size: rem($h1-fs);
+    line-height: rem($h1-fs + 10);
+
+    span {
+      font-size: rem($h1-fs * 0.7);
+    }
+  }
+}

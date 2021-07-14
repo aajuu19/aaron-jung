@@ -1,0 +1,9 @@
+.root {
+  margin-bottom: 1rem;
+
+  &.mBr {
+    @include up("m") {
+      flex-basis: calc(50% - 1rem);
+    }
+  }
+}

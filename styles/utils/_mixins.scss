@@ -14,3 +14,28 @@
     }
   }
 }
+
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+
+@mixin black-overlay() {
+  position: relative;
+  &:before {
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $dark;
+    opacity: 0.6;
+  }
+}
+
+@mixin to-front() {
+  position: relative;
+  z-index: 1;
+}
